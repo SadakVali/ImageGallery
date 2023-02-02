@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1.25rem 0px 3rem 0px;
+    color: #92A8D1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+    object-position: center;
+    /* object-position: center; My exploration */
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 10px #333);
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 5%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
+    transition: 0.3s;
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* HOME WORK : Figma Link, Image Gallerry with Grid LayOut, Product Card */
+
+/* 
+
+1. center "My Gallerry" headline with text align property.
+2. For each image use figure tag with caption.
+3. Filter on the image to make it GrayScale
+4. On hover make figure caption visible by using text opacity=1, increase the scale
+   of the image and text smoothly with transition and collapse abruptly, display 
+   box shadow on 4 sides, remove filter on the image, 
+5. Same size in between the images
+6. Pretty Responsive.
+7. black gradient at the bottom of the pic and will get invisible very quickly.
+8. Images are centered wrt width view port
+9. edges of each pic is rounded. ===> border-radius
+10. title, fevicon, background color, overflow-x is hidden
+
+*/
